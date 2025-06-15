@@ -13,7 +13,15 @@
         "recuperar" => AuthController::recuperar(),
         "redefinir" => AuthController::redifinir(),
         "cadastrar" => AuthController::cadastrar(),
-        "dashboard" => TarefasController::index(),
+        
+        "dashboard" => HomeController::index(),
+        "sobre" => HomeController::sobre(),
+
+        "eventos" => EventoController::index(),
+        "evento/criar" => EventoController::criar(),
+        "evento/editar" => EventoController::editar($url[1]),
+        "evento/atualizar" => EventoController::atualizar($url[1]),
+        "evento/apagar" => EventoController::deletar($url[1]),
 
         /*"add" => TarefasController::addTarefa(),
         "editar" => TarefasController::editarTarefa($url[1]),
