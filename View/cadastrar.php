@@ -1,3 +1,6 @@
+<nav>
+    <?php require_once __DIR__ . "/../View/header.php"; ?>
+</nav>
 <form method="post" action="">
     Usuario: <input type="text" name="usuario" required>
     Senha: <input type="password" name="senha" required>
