@@ -18,4 +18,9 @@ class HomeController {
         include __DIR__ . "/../View/sobre.php";
     }
 
+    static function contato() {
+        session_start();
+        include __DIR__ . "/../View/contato.php";
+    }
+
 }

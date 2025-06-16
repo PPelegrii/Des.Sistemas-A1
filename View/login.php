@@ -7,6 +7,4 @@
     Senha: <input type="password" name="senha">
     <input type="submit" value="Login">
 </form>
-<a href="cadastrar">Cadastrar</a>
 <a href="recuperar">Recuperar Senha</a>
-<a href="sobre">Sobre</a>

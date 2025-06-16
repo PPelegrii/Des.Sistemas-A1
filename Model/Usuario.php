@@ -12,7 +12,6 @@ class Usuario {
     }
 
     public static function fazerLogin($usuario, $senha) {
-    session_start();
     $conn = Banco::getConn();
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ?");
     $stmt->execute([$usuario]);

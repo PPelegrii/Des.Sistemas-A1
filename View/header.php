@@ -3,11 +3,14 @@
         <?php if (isset($_SESSION['id-usuario'])): ?>
             <a href="dashboard" class="button button--secondary">Dashboard</a>
             <a href="eventos" class="button button--secondary">Eventos</a>
+            <a href="sobre" class="button button--secondary">Sobre Nós</a>
+            <a href="contato" class="button button--secondary">Contato</a>
             <a href="logout" class="button button--danger">Logout</a>
         <?php else: ?>
             <a href="login" class="button button--secondary">Fazer Login</a>
             <a href="cadastrar" class="button button--primary">Cadastrar</a>
             <a href="sobre" class="button button--secondary">Sobre Nós</a>
+            <a href="contato" class="button button--secondary">Contato</a>
         <?php endif; ?>
     </div>
 </nav>

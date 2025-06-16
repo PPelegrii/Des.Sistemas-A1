@@ -28,8 +28,6 @@ class AuthController {
         include __DIR__ . "/../View/cadastrar.php";
     }
     static function login() {
-        session_start();
-
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $usuario_formulario = $_POST['usuario'] ?? null;
             $senha_formulario = $_POST['senha'] ?? null;
@@ -66,7 +64,7 @@ class AuthController {
 
             $conn = Banco::getConn();
             $stmt = $conn->prepare("SELECT * FROM usuarios WHERE (usuario=? AND data_nascimento=? AND cpf=?");
-            $stmt->execute([$usuario, $usuario, $data_nascimento, $cpf]);
+            $stmt->execute([$usuario, $data_nascimento, $cpf]);
             $user = $stmt->fetch(PDO::FETCH_OBJ);
 
             if ($user) {

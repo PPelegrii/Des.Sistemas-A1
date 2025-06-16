@@ -9,7 +9,6 @@
 </head>
 <nav>
     <?php require_once __DIR__ . "/../View/header.php";?>
-    
 </nav>
 <body>
     <div class="app">
@@ -25,9 +24,7 @@
         </svg>
         <span class="sidebar__title">Vanilla Calendar</span>
       </div>
-
-      <button class="button button--primary button--lg" data-event-create-button>Create event</button>
-
+      
       <div class="mini-calendar" data-mini-calendar>
         <div class="mini-calendar__header">
           <time class="mini-calendar__date" data-mini-calendar-date></time>

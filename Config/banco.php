@@ -5,7 +5,7 @@ class Banco {
 
     public static function getConn(){
         if (!self::$conn) {
-            $host = 'localhost';
+            $host = 'localhost:3307';
             $dbname = 'php-a1';
             $user = 'root';
             $senh = '';

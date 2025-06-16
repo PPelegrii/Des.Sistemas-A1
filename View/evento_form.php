@@ -63,10 +63,11 @@
             <label for="data_fim">Data e Hora de Fim</label>
             <input type="datetime-local" id="data_fim" name="data_fim" required
                 value="<?= isset($evento) ? date('Y-m-d\TH:i', strtotime($evento->data_fim)) : '' ?>">
-
             <div class="form-actions">
                 <button type="submit" class="button button--primary"><?= isset($evento) ? 'Salvar Alterações' : 'Criar Evento' ?></button>
                 <a href="eventos" class="button button--secondary">Cancelar</a>
+                <?php 
+                ?>
             </div>
         </form>
     </div>

@@ -70,8 +70,8 @@
                             <div><?= htmlspecialchars($evento->descricao) ?></div>
                         </div>
                         <div class="evento-actions">
-                            <a href="evento/editar/<?= $evento->Id ?>" class="button button--secondary button--sm">Editar</a>
-                            <a href="evento/deletar?Id=<?= $evento->Id ?>" class="button button--danger button--sm" onclick="return confirm('Deseja excluir este evento?')">Excluir</a>
+                            <a href="evento_form/<?= $evento->Id ?>" class="button button--secondary button--sm">Editar</a>
+                            <a href="evento/deletar/<?= $evento->Id ?>" class="button button--danger button--sm" onclick="return confirm('Deseja excluir este evento?')">Excluir</a>
                         </div>
                     </li>
                 <?php endforeach; ?>
