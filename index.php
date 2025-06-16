@@ -18,10 +18,10 @@
         "sobre" => HomeController::sobre(),
 
         "eventos" => EventoController::index(),
-        "evento/criar" => EventoController::criar(),
-        "evento/editar" => EventoController::editar($url[1]),
+        "evento_form" => EventoController::criar(),
+        "evento/editar" => EventoController::editar($url[2]),
         "evento/atualizar" => EventoController::atualizar($url[1]),
-        "evento/apagar" => EventoController::deletar($url[1]),
+        "evento/apagar" => EventoController::deletar($url[2]),
 
         /*"add" => TarefasController::addTarefa(),
         "editar" => TarefasController::editarTarefa($url[1]),

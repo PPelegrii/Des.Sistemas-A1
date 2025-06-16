@@ -40,7 +40,6 @@ class AuthController {
                 $resp = Usuario::fazerLogin($usuario_formulario, $senha_formulario);
 
                 if ($resp) {
-                    echo "Sucesso!";
                     header("Location: dashboard");
                 } else {
                     echo "Erro X.x";
@@ -50,7 +49,6 @@ class AuthController {
         include __DIR__ . "/../View/login.php";
     }
     static function logout(){
-        session_start();
         session_destroy();
         header("Location: login");
     }

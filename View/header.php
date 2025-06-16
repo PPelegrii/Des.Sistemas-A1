@@ -1,6 +1,6 @@
 <nav class="main-nav" style="background:#f5f5f5;padding:1rem 0 1rem 0;margin-bottom:2rem;">
     <div style="max-width:700px;margin:0 auto;display:flex;gap:1rem;align-items:center;">
-        <?php if (isset($_SESSION['usuario'])): ?>
+        <?php if (isset($_SESSION['id-usuario'])): ?>
             <a href="dashboard" class="button button--secondary">Dashboard</a>
             <a href="eventos" class="button button--secondary">Eventos</a>
             <a href="logout" class="button button--danger">Logout</a>

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="Assets/estilo.css">
 </head>
 <nav>
-    <?php require_once __DIR__ . "/../View/header.php"; ?>
+    <?php require_once __DIR__ . "/../View/header.php";?>
+    
 </nav>
 <body>
     <div class="app">

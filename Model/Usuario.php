@@ -12,6 +12,7 @@ class Usuario {
     }
 
     public static function fazerLogin($usuario, $senha) {
+    session_start();
     $conn = Banco::getConn();
     $stmt = $conn->prepare("SELECT * FROM usuarios WHERE usuario = ?");
     $stmt->execute([$usuario]);
@@ -19,7 +20,7 @@ class Usuario {
 
     if ($user && password_verify($senha, $user->senha)) {
         $_SESSION['usuario'] = $user->usuario;
-        $_SESSION['id-usuario'] = $user->id;
+        $_SESSION['id-usuario'] = $user->Id;
         return true;
     }
     return false;

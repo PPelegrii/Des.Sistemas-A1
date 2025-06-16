@@ -18,8 +18,8 @@ class EventoController
 
     // Exibir formulário de criação
     public static function criar(){
+        session_start();
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            session_start();
             $usuario_id = $_SESSION['id-usuario'];
             $titulo = $_POST['titulo'] ?? null;
             $descricao = $_POST['descricao'] ?? null;
@@ -37,9 +37,14 @@ class EventoController
     }
 
     // Exibir formulário de edição
-    public static function editar($id)
+    public static function editar($Id)
     {
-        $evento = Evento::buscarPorId($id);
+        session_start();
+        if (!isset($_SESSION['id-usuario'])) {
+            header('Location: login');
+            exit;
+        }
+        $evento = Evento::buscarPorId($Id);
         if (!$evento) {
             echo "Evento não encontrado.";
             exit;
@@ -51,7 +56,7 @@ class EventoController
             $data_inicio = $_POST['data_inicio'] ?? null;
             $data_fim = $_POST['data_fim'] ?? null;
 
-            if (Evento::atualizar($id, $titulo, $descricao, $data_inicio, $data_fim)) {
+            if (Evento::atualizar($Id, $titulo, $descricao, $data_inicio, $data_fim)) {
                 header('Location: eventos');
                 exit;
             } else {
@@ -62,8 +67,8 @@ class EventoController
     }
 
     // Deletar evento
-    public static function deletar($id){
-        if (Evento::deletar($id)) {
+    public static function deletar($Id){
+        if (Evento::deletar($Id)) {
             header('Location: eventos');
             exit;
         } else {
